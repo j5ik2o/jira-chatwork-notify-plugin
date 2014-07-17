@@ -1,0 +1,52 @@
+<atlassian-plugin key="${project.groupId}.${project.artifactId}" name="${project.name}" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}" />
+        <param name="plugin-icon">images/pluginIcon.png</param>
+        <param name="plugin-logo">images/pluginLogo.png</param>
+    </plugin-info>
+
+    <!-- add our i18n resource -->
+    <resource type="i18n" name="i18n" location="jira-chatwork-notify-plugin"/>
+    
+    <!-- add our web resources -->
+    <web-resource key="jira-chatwork-notify-plugin-resources" name="Jira ChatWork Notify Plugin Web Resources">
+        <dependency>com.atlassian.auiplugin:ajs</dependency>
+        <resource type="download" name="images/" location="/images"/>
+        <context>jira-chatwork-notify-plugin</context>
+    </web-resource>
+
+    <component-import key="transactionTemplate"
+                      interface="com.atlassian.sal.api.transaction.TransactionTemplate" />
+    <component-import key="userManager"
+                      interface="com.atlassian.sal.api.user.UserManager" />
+    <component-import key="loginUriProvider"
+                      interface="com.atlassian.sal.api.auth.LoginUriProvider" />
+    <component-import key="applicationProperties"
+                      interface="com.atlassian.sal.api.ApplicationProperties" />
+    <component-import key="velocity-renderer"
+                      interface="com.atlassian.templaterenderer.velocity.one.six.VelocityTemplateRenderer" />
+    <component-import key="pluginSettingsFactory"
+                      interface="com.atlassian.sal.api.pluginsettings.PluginSettingsFactory" />
+    <component-import key="eventPublisher" interface="com.atlassian.event.api.EventPublisher"/>
+
+    <!-- publish our component -->
+    <component key="myPluginComponent" class="com.example.tutorial.plugins.MyPluginComponentImpl" public="true">
+        <interface>com.example.tutorial.plugins.MyPluginComponent</interface>
+    </component>
+    
+
+    <component key="eventListener" class="com.example.tutorial.plugins.IssueEventListener">
+        <description>Class that processes the incoming JIRA issue events.</description>
+    </component>
+
+    <component key="globalConfigService" class="com.example.tutorial.plugins.GlobalConfigService">
+        <description>aaaa</description>
+    </component>
+
+    <rest key="rest" path="/jira-chatwork-notify-plugin" version="1.0">
+        <description>Provides REST resources for the admin UI.</description>
+    </rest>
+
+</atlassian-plugin>
