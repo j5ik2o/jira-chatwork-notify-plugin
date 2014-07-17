@@ -8,4 +8,6 @@ velocity.log
 .idea*
 *.iml
 
+atlassian-ide-plugin.xml
+
 target
