@@ -1,11 +1,10 @@
-package com.example.tutorial.plugins
+package com.github.j5ik2o.jcn
 
 import javax.servlet.http.HttpServletRequest
+import javax.ws.rs._
 import javax.ws.rs.core.Response.Status
 import javax.ws.rs.core.{Context, MediaType, Response}
-import javax.ws.rs._
 
-import com.atlassian.sal.api.pluginsettings.PluginSettingsFactory
 import com.atlassian.sal.api.transaction.{TransactionCallback, TransactionTemplate}
 import com.atlassian.sal.api.user.UserManager
 import org.slf4j.LoggerFactory

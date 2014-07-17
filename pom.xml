@@ -14,7 +14,7 @@
 	</organization>
 
 	<name>jira-chatwork-notify-plugin</name>
-	<description>This is the com.github.j5ik2o.atlassian:jira-chatwork-notify-plugin plugin for Atlassian JIRA.</description>
+	<description>This is the com.github.j5ik2o.atlassian:jira-chatwork-notify-plugin for Atlassian JIRA.</description>
 	<packaging>atlassian-plugin</packaging>
 
 

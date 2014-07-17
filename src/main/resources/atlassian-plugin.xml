@@ -31,17 +31,11 @@
                       interface="com.atlassian.sal.api.pluginsettings.PluginSettingsFactory" />
     <component-import key="eventPublisher" interface="com.atlassian.event.api.EventPublisher"/>
 
-    <!-- publish our component -->
-    <component key="myPluginComponent" class="com.example.tutorial.plugins.MyPluginComponentImpl" public="true">
-        <interface>com.example.tutorial.plugins.MyPluginComponent</interface>
-    </component>
-    
-
-    <component key="eventListener" class="com.example.tutorial.plugins.IssueEventListener">
+    <component key="eventListener" class="com.github.j5ik2o.jcn.IssueEventListener">
         <description>Class that processes the incoming JIRA issue events.</description>
     </component>
 
-    <component key="globalConfigService" class="com.example.tutorial.plugins.GlobalConfigService">
+    <component key="globalConfigService" class="com.github.j5ik2o.jcn.GlobalConfigService">
         <description>aaaa</description>
     </component>
 

@@ -1,4 +1,4 @@
-package com.example.tutorial.plugins
+package com.github.j5ik2o.jcn
 
 import java.util
 

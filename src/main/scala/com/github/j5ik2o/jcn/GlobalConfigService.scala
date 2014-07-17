@@ -1,8 +1,9 @@
-package com.example.tutorial.plugins
+package com.github.j5ik2o.jcn
 
 import java.util.Properties
 
-import com.atlassian.sal.api.pluginsettings.{PluginSettingsFactory, PluginSettings}
+import com.atlassian.sal.api.pluginsettings.{PluginSettings, PluginSettingsFactory}
+
 import scala.collection.JavaConverters._
 
 case class GlobalConfigService(private val pluginSettingsFactory: PluginSettingsFactory) {
